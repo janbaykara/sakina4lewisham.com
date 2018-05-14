@@ -44,6 +44,40 @@
                 column-gap: 48px;
             }
         }
+
+        @supports (zoom:2) {
+            input[type="radio"],  input[type=checkbox]{
+            zoom: 2;
+            }
+        }
+
+        @supports not (zoom:2) {
+            input[type="radio"],  input[type=checkbox]{
+                transform: scale(2);
+                margin: 15px;
+            }
+        }
+
+        label {
+            /* fix vertical align issues */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+
+        .form-active {
+            box-shadow: 0px 0px 700px 500px rgba(0, 0, 0, 0.65);
+            z-index: 999;
+            position: relative;
+        }
+
+        .input-hover:focus {
+            position: relative;
+            z-index: 999;
+            box-shadow:
+                0 0 0 3px rgb(255, 225, 2),
+                0 2px 5px 0 rgba(0,0,0,0.5);
+        }
     </style>
 
     <!-- Social meta tags -->
@@ -95,22 +129,36 @@
         </div>
     </header>
 
-    <form method='post' target='_blank' action='https://myself.us9.list-manage.com/subscribe/post?u=a28ffc40e01a59e473ab5c0bb&amp;id=bae66ee9ff'>
-        <div class='bg-red white tc pv4 ph3 ph4-ns flex-ns flex-row-ns items-center justify-center'>
-            <div class='f-subheadline'>
-                <i class='far fa-envelope'></i>
-            </div>
-            <div class='mr3 tr'>
-                <p class='dib f3 measure-narrow tl mv2 ml3 right lh-title'> Give us your details to make sure Sakina is Lewisham East's next Labour MP</p>
-            </div>
-            <div class='mv3 dib tl shadow-4 grow'>
-                <input required type='email' placeholder='your@email.com' name='EMAIL' class='w-100 cabin tc center db br2 bg-white pv3 ph4 f4 black-80 bn br--top'
-                />
-                <button type='submit' class='w-100 db tc f4 fw5 center ba b--white bg-transparent white cabin pointer hover-bg-green pv2 ph3 br2 br--bottom'>Join the campaign</button>
+    <form id='pledge-form' method='post' target='_blank' action='https://myself.us9.list-manage.com/subscribe/post?u=a28ffc40e01a59e473ab5c0bb&amp;id=bae66ee9ff'>
+        <div class='bg-red pointer white pv4 pv5-ns ph3 ph4-ns'>
+            <div class='cf mw8-l center'>
+                <div class='fl-l w-40-l pr3'>
+                    <div class='db tc tl-l'><i class="f1 far fa-envelope"></i></div>
+                    <div class='f3 f2-ns mb5 mb0-l b tc tl-l'>Give us your details to make sure Sakina is Lewisham East's next Labour MP</div>
+                </div>
+                <div class='fl-l w-60-l lh-copy'>
+                    <input required type='email' placeholder='your@email.com' name='EMAIL'
+                        class='input-hover w-100 cabin center db br2 bg-white pv3 ph4 f4 black-80 bn'
+                    />
+                    <div class='mt2 cf'>
+                        <input class='input-hover cabin fl w-50 bn pv3 ph4 f4 black-80 br2 br--left' type="text" value="" name="FNAME" placeholder="First name" />
+                        <input class='input-hover cabin fl w-50 bn pv3 ph4 f4 black-80 br2 br--right' style='border-left: 1px solid #EEE;' type="text" value="" name="LNAME" placeholder="Last name" />
+                    </div>
+                    <label class='db mt3 f4 lh-title'>
+                        <input type="checkbox" value="I'm a member of Lewisham East Labour Party" name="LEWISHAMLP">
+                        I'm a member of Lewisham East Labour Party
+                    </label>
+                    <label class='db mt3 f4 lh-title'>
+                        <input type="checkbox" value="I'm going to vote for Sakina at the hustings on Saturday 16th May" name="PLEDGE_1">
+                        <span>I'm going to vote for Sakina at hustings (Saturday 16th May!)</span>
+                    </label>
+                    <button type='submit' class='mt4 dib tl shadow-4 grow w-100 db tc f3 fw5 center ba b--white bg-green white cabin pointer fw9 pv3 ph3 br2'>Join the campaign</button>
+                </div>
             </div>
         </div>
     </form>
-    <section class='pv5 black-80'>
+
+    <section class='pv3 pv4-m pv5-l black-80'>
         <div class='center lh-copy ph3 ph4-ns measure-wide mw8-l'>
             <h2 class='b f3 red'>More about me</h2>
             <div class='f4 txt-col-2'>
@@ -133,7 +181,7 @@
             </div>
         </div>
     </section>
-    <footer class='mt5 pt5 pv7 bg-red white tc relative'>
+    <footer class='pt5 pv7 bg-red white tc relative'>
         <div class='z-1 absolute top-0 left-0 w-100 h-100 cover o-40' style='background: url(windrush.jpg) center'></div>
         <div class='z-2 relative'>
             <div class='mb4 f4'>Sakina for Lewisham East</div>
@@ -143,6 +191,8 @@
                 <i class='fab fa-twitter'></i> Twitter</a>
         </div>
     </footer>
+
+    <script src='form.js'></script>
 </body>
 
 </html>
