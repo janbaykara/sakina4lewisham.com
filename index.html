@@ -5,69 +5,143 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css" />
 
-    <!-- TODO: Style, font -->
-    <!-- TODO: Social meta tags -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47411407-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-47411407-3');
+    </script>
+
+    <!-- Files-->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/regular.css" integrity="sha384-EWu6DiBz01XlR6XGsVuabDMbDN6RT8cwNoY+3tIH+6pUCfaNldJYJQfQlbEIWLyA"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css" integrity="sha384-VGCZwiSnlHXYDojsRqeMn3IVvdzTx5JEuHgqZ3bYLCLUBV8rvihHApoA1Aso2TZA"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css" integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV"
+        crossorigin="anonymous">
+    <style>
+        .cabin {
+            font-family: 'Cabin', sans-serif;
+        }
+
+        .bg-red {
+            background-color: #e4003b;
+        }
+
+        .red {
+            color: #e4003b;
+        }
+
+        @media screen and (min-width: 60em) {
+            .txt-col-2 {
+                columns: 2;
+                column-gap: 48px;
+            }
+        }
+    </style>
+
+    <!-- Social meta tags -->
+    <meta property="og:title" content="Sakina for Lewisham" />
+    <meta property="og:description" content="The campaign to Sakina Sheikh to be elected MP for Lewisham East" />
+    <meta property="og:url" content="http://sakina4lewisham.co.uk" />
+    <meta property="og:image" content="https://sakina4lewisham.co.uk/windrush.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SakinaZS">
+    <meta name="twitter:creator" content="@SakinaZS">
+    <meta name="twitter:title" content="Sakina for Lewisham">
+    <meta name="twitter:description" content="The campaign to Sakina Sheikh to be elected MP for Lewisham East">
+    <meta name="twitter:image" content="https://sakina4lewisham.co.uk/windrush.jpg">
+
     <title>Sakina for Lewisham</title>
 </head>
 
-<body>
-    <header>
-        <!-- TODO: Lewisham in the background -->
-        <div class='bg-dark-red white pv3 pv4-ns ph3 ph5-ns ph6-l'>
-            <div class='measure center'>
-                On Wednesday May 16th Labour members have to choose who will become the Labour candidate for Lewisham East.
+<body class='cabin'>
+    <nav class='center mw8 db-l ph3 pv3 f5 black-50 tc tl-l'>
+        <span class='f6 i'>Follow the campaign</span>
+        <a class='link pl2' style='color: #4469B0' target='_blank' href='https://www.facebook.com/Sakina4Lewisham/' alt='Facebook page'>
+            <i class='fab fa-facebook'></i> Facebook</a>
+        <a class='link pl2' style='color: #33A4EC' target='_blank' href='https://twitter.com/SakinaZS' alt='Twitter account'>
+            <i class='fab fa-twitter'></i> Twitter</a>
+    </nav>
+    <header class='mw8 center mv3 mv4-m mv5-l'>
+        <div class='flex flex-column flex-row-reverse-l items-center justify-center'>
+            <div class='w-two-thirds w-60-ns ph3 ph4-ns'>
+                <div class='overflow-hidden br-100 aspect-ratio--1x1 tc center' style='height: 0;'>
+                    <img src='portrait.jpg' />
+                </div>
             </div>
-        </div>
-        <div class='flex flex-column flex-row-ns ph3 ph5-ns ph6-l'>
-            <div class='w-100 w-40-m w-third-l relative mr3 mr4-ns'>
-                <img src='portrait.jpeg' />
-            </div>
-            <div>
-                <h1 class='b f1 red'>Sakina Sheikh</h1>
-                <p>
+            <div class='w-40-l ph3 measure'>
+                <h1 class='f1 red b'>Sakina Sheikh</h1>
+                <p class='f3 lh-title red'>
+                    On
+                    <u>Saturday 19th May</u> Labour members have to choose who will become the Labour candidate for Lewisham
+                    East.
+                </p>
+                <p class='f4 lh-copy black-80'>
                     I want to be that candidate before, with your help, becoming Labour’s next member of parliament for Lewisham East. A lifelong
-                    Lewisham resident and long committed to values of social justice and equality, I joined the Labour party
-                    after being inspired by the leadership of Jeremy Corbyn. In the two years since I am grateful to have
-                    been part of a movement which has begun to remake politics for the many.
+                    Lewisham resident and long committed to values of
+                    <b>social justice and equality</b>, I joined the Labour party after being inspired by the leadership of
+                    Jeremy Corbyn. In the two years since I am grateful to have been part of a movement which has begun to
+                    remake politics for the many.
                 </p>
             </div>
         </div>
     </header>
-    <div class='bg-dark-red white tc'>
-        <form method='post' action='<!-- TODO: INSERT MAILCHIMP LINK HERE -->'>
-            <p>Give us your email so you can receive updates and news about the campaign</p>
-            <input required type='text' placeholder='your@email.com' class='br3 bg-white shadow-4 pa4 f4 black-80' />
-            <button type='submit' class='white dark-red b tc f3 i'>Join the campaign</button>
-        </form>
-    </div>
-    <section class='pv5 black-80 ph3 ph5-ns ph6-l'>
-        <h2 class='b f3 red'>More about me</h2>
-        <p>
-            I’m a local councillor, born and bred in Lewisham and will stand up for our community. Lewisham is where I live, where I
-            grew up and where I sit as a Labour councillor. I too am affected by the often shambolic service offered by Southern
-            Rail and unaffordable local housing and have campaigned to ensure Lewisham Hospital services are protected, properly
-            funded and out of private hands. If selectd for a parliamentary seat, my experience of living and growing up
-            in Lewisham will make me best placed to stand up for our community.
-        </p>
-        <p>
-            I will amplify the voices of marginalised communities in Lewisham. While Lewisham is one of the most diverse communities
-            in the UK our parliament is not, and as a young Pakistani woman who grew up in Lewisham and understand the local
-            area, I am best placed to listen to, platform and amplify the voices of marginalised communities in Lewisham.
-        </p>
-        <p>
-            I’m a seasoned campaigner at the local and national level, who has skills and experience to advocate for you in parliament.
-            From my work in climate change and energy campaigning I understand the challenges we face in tackling a system
-            rigged for the few. Most importantly, I know tackling corporate power and inequality starts at the local level.
-            I have nationally coordinated Keep Our NHS Public campaigns and believe our NHS must stay public. I will fight
-            to ensure Lewisham Hospital services stay protected, properly funded and public. I will fight hard against creeping
-            privatisation of our NHS, such as the proposed STP for South East London.
-        </p>
+
+    <form method='post' target='_blank' action='https://myself.us9.list-manage.com/subscribe/post?u=a28ffc40e01a59e473ab5c0bb&amp;id=bae66ee9ff'>
+        <div class='bg-red white tc pv4 ph3 ph4-ns flex-ns flex-row-ns items-center justify-center'>
+            <div class='f-subheadline'>
+                <i class='far fa-envelope'></i>
+            </div>
+            <div class='mr3 tr'>
+                <p class='dib f3 measure-narrow tl mv2 ml3 right lh-title'> Give us your details to make sure Sakina is Lewisham East's next Labour MP</p>
+            </div>
+            <div class='mv3 dib tl shadow-4 grow'>
+                <input required type='email' placeholder='your@email.com' name='EMAIL' class='w-100 cabin tc center db br2 bg-white pv3 ph4 f4 black-80 bn br--top'
+                />
+                <button type='submit' class='w-100 db tc f4 fw5 center ba b--white bg-transparent white cabin pointer hover-bg-green pv2 ph3 br2 br--bottom'>Join the campaign</button>
+            </div>
+        </div>
+    </form>
+    <section class='pv5 black-80'>
+        <div class='center lh-copy ph3 ph4-ns measure-wide mw8-l'>
+            <h2 class='b f3 red'>More about me</h2>
+            <div class='f4 txt-col-2'>
+                <p class='mt0'>I’m a local councillor, who was born and bred in the borough. Lewisham is where I have always lived and is
+                    a place which has given me everything - so now I want to give something back. I know the problems that
+                    need dealing with locally such as the shambolic service offered by Southern Rail and increasingly unaffordable
+                    housing in the area. In resisting cuts to local services I have been on the front line of fighting austerity,
+                    campaigning to ensure Lewisham Hospital services are protected, properly funded and out of private hands.</p>
+                <p class='mt0'>I will work hard to amplify the voices of marginalised communities in Lewisham East. While Lewisham is one
+                    of the most diverse places in Britain - a vision of our multicultural future - our parliament is not.
+                    As a young Pakistani woman who understands the local area I will make it my mission that all constituents,
+                    regardless of colour or creed, know they have an advocate at Westminster.</p>
+                <p class='mt0'>I’m a seasoned campaigner at the local and national level, who has skills and experience to advocate for
+                    you in parliament. From my work in climate change and energy campaigning I understand the challenges
+                    we face in tackling a system rigged for the few. Most importantly, I know tackling corporate power and
+                    inequality starts at the local level. I have nationally coordinated
+                    <a class='link red' href='https://keepournhspublic.com/'>Keep Our NHS Public campaigns</a> and believe our NHS must stay public. I will fight to ensure Lewisham
+                    Hospital services stay protected, properly funded and public. I will fight hard against creeping privatisation
+                    of our NHS, such as the proposed STP for South East London.</p>
+            </div>
+        </div>
     </section>
-    <footer class='mt5 pv6 ph3 ph5-ns ph6-l bg-red'>
-        <!-- TODO: Social icons -->
-        <a href='https://www.facebook.com/Sakina4Lewisham/' alt='Facebook page'>Facebook</a>
+    <footer class='mt5 pt5 pv7 bg-red white tc relative'>
+        <div class='z-1 absolute top-0 left-0 w-100 h-100 cover o-40' style='background: url(windrush.jpg) center'></div>
+        <div class='z-2 relative'>
+            <div class='mb4 f4'>Sakina for Lewisham East</div>
+            <a class='f4 link white pa3' target='_blank' href='https://www.facebook.com/Sakina4Lewisham/' alt='Facebook page'>
+                <i class='fab fa-facebook'></i> Facebook</a>
+            <a class='f4 link white pa3' target='_blank' href='https://twitter.com/SakinaZS' alt='Twitter account'>
+                <i class='fab fa-twitter'></i> Twitter</a>
+        </div>
     </footer>
 </body>
 
