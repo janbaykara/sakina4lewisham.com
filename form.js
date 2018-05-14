@@ -34,14 +34,19 @@ function scrollTo ($form) {
 
 function focus ($form) {
   return function (e) {
-    $form.classList.add('form-active')
+    if ($form.classList.contains('form-active')) {
+      return
+    }
     $form.querySelector('input').focus()
+    $form.classList.add('form-active')
   }
 }
 
 function defocus ($form) {
   return function (e) {
-    $form.classList.remove('form-active')
+    if ($form.classList.contains('form-active')) {
+      $form.classList.remove('form-active')
+    }
   }
 }
 

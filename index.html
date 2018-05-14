@@ -71,6 +71,10 @@
             position: relative;
         }
 
+        .input-hover {
+            outline: none;
+        }
+
         .input-hover:focus {
             position: relative;
             z-index: 999;
@@ -145,12 +149,12 @@
                         <input class='input-hover cabin fl w-50 bn pv3 ph4 f4 black-80 br2 br--right' style='border-left: 1px solid #EEE;' type="text" value="" name="LNAME" placeholder="Last name" />
                     </div>
                     <label class='db mt3 f4 lh-title'>
-                        <input type="checkbox" value="I'm a member of Lewisham East Labour Party" name="LEWISHAMLP">
-                        I'm a member of Lewisham East Labour Party
+                        <input class='v-mid' type="checkbox" value="I'm a member of Lewisham East Labour Party" name="LEWISHAMLP">
+                        <span class='v-mid'>I'm a member of Lewisham East Labour Party</span>
                     </label>
                     <label class='db mt3 f4 lh-title'>
-                        <input type="checkbox" value="I'm going to vote for Sakina at the hustings on Saturday 16th May" name="PLEDGE_1">
-                        <span>I'm going to vote for Sakina at hustings (Saturday 16th May!)</span>
+                        <input class='v-mid' type="checkbox" value="I'm going to vote for Sakina at the hustings on Saturday 16th May" name="PLEDGE_1">
+                        <span class='v-mid'>I'm going to vote for Sakina at hustings (Saturday 16th May!)</span>
                     </label>
                     <button type='submit' class='mt4 dib tl shadow-4 grow w-100 db tc f3 fw5 center ba b--white bg-green white cabin pointer fw9 pv3 ph3 br2'>Join the campaign</button>
                 </div>
