@@ -1,0 +1,62 @@
+.cabin {
+    font-family: 'Cabin', sans-serif;
+}
+
+.bg-red {
+    background-color: #e4003b;
+}
+
+.red {
+    color: #e4003b;
+}
+
+.b--red {
+    border-color: #e4003b;
+}
+
+@media screen and (min-width: 60em) {
+    .txt-col-2 {
+        columns: 2;
+        columns: 2;
+        column-gap: 48px;
+    }
+}
+
+@supports (zoom:2) {
+    input[type="radio"],
+    input[type=checkbox] {
+        zoom: 2;
+    }
+}
+
+@supports not (zoom:2) {
+    input[type="radio"],
+    input[type=checkbox] {
+        transform: scale(2);
+        margin: 15px;
+    }
+}
+
+label {
+    /* fix vertical align issues */
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.form-active {
+    box-shadow: 0px 0px 700px 500px rgba(0, 0, 0, 0.65);
+    z-index: 999;
+    position: relative;
+}
+
+.input-hover {
+    outline: none;
+}
+
+.input-hover:focus {
+    position: relative;
+    z-index: 999;
+    box-shadow: 0 0 0 3px rgb(255, 225, 2),
+    0 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
