@@ -1,8 +1,8 @@
 // Bootstrap
 
 (function bootstrap() {
-  var $form = document
-    .getElementById("pledge-form")
+  var $form = document.getElementById("pledge-form")
+  var $submitBtn = document.getElementById("submit-form-btn")
 
   var defaultAccessor = function(p) {
     return p;
@@ -33,8 +33,8 @@
   });
 
   document.addEventListener("click", excludeElement($form, defocus($form)));
-  $form.addEventListener("click", focus($form));
   $form.addEventListener("submit", defocus($form));
+  $submitBtn.addEventListener("click", reportSubmissionToGoogle)
 })();
 
 // Modules
@@ -90,6 +90,11 @@ function excludeElement($mask, handler) {
     }
     handler(e);
   };
+}
+
+function reportSubmissionToGoogle(e) {
+  // From googleanalytics.js
+  ga('send', 'event', 'Action', 'Click', 'Submit')
 }
 
 // Utils
