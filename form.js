@@ -33,8 +33,7 @@
   });
 
   document.addEventListener("click", excludeElement($form, defocus($form)));
-  $form.addEventListener("submit", defocus($form));
-  $submitBtn.addEventListener("click", reportSubmissionToGoogle)
+  $form.addEventListener("submit", onSubmit($form));
 })();
 
 // Modules
@@ -65,6 +64,13 @@ function fill($form) {
   };
 }
 
+function onSubmit($form) {
+  return function (e) {
+    defocus($form);
+    reportSubmissionToGoogle(e);
+  }
+}
+
 function focus($form) {
   return function(e) {
     if ($form.classList.contains("form-active")) {
@@ -93,8 +99,10 @@ function excludeElement($mask, handler) {
 }
 
 function reportSubmissionToGoogle(e) {
-  // From googleanalytics.js
-  ga('send', 'event', 'Action', 'Click', 'Submit')
+  gtag('event', 'Click', {
+    'event_category': 'Subscribe',
+    'event_label': 'Subscribe to campaign',
+  })
 }
 
 // Utils
